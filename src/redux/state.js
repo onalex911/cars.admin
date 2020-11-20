@@ -1,6 +1,26 @@
 let store = {
     _state : {
-        greeting: 'It works!'
+        greeting: 'It works!',
+
+        pagesInfo: {
+            main: {
+                pagePath: '/',
+                pageHead: 'Главная страница',
+                externalAction: ''
+            },
+
+            uploading: {
+                pagePath: '/uplading',
+                pageHead: 'Загрузка изображений',
+                externalAction: 'https://cars.arkont-portal.ru/legacy/upload_image.html'
+            },
+
+            editGroups: {
+                pagePath: '/editgroups',
+                pageHead: 'Редактирование групп изображений',
+                externalAction: 'https://cars.arkont-portal.ru/legacy/show_photos.html'
+            },
+        }
     },
     getState(){
         return this._state

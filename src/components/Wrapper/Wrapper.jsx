@@ -2,13 +2,15 @@ import React from 'react'
 import '../../css/sb-admin-2.css'
 import Sidebar from "./Sidebar/Sidebar";
 import ContentWrapper from "./ContentWrapper/ContentWrapper";
-import Footer from "./ContentWrapper/Footer/Footer";
+import {BrowserRouter as Router} from "react-router-dom";
 
 const Wrapper = (props) => {
     return (
         <div id='wrapper'>
-            <Sidebar/>
-            <ContentWrapper state={props.state}/>
+            <Router>
+                <Sidebar state={props.state}/>
+                <ContentWrapper state={props.state}/>
+            </Router>
         </div>
     )
 }

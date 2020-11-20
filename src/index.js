@@ -6,16 +6,14 @@ import store from './redux/state'
 //import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css'
 //import './css/sb-admin-2.css'
-import {
-    BrowserRouter as Router
-} from "react-router-dom";
+
 
 let rerenderEntireTree = (state) => {
     ReactDOM.render(
         <React.StrictMode>
-            <Router>
-                <App state={state}/>
-            </Router>
+
+                <App state={store.getState()}/>
+
         </React.StrictMode>,
         document.getElementById('root')
     );
