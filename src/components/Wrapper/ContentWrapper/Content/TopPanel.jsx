@@ -1,5 +1,5 @@
 import React from 'react'
-import navbar from './../../../public/css/sb-admin-2.css'
+import navbar from '../../../../css/sb-admin-2.css'
 
 const TopPanel = (props) => {
     return (
@@ -11,4 +11,4 @@ const TopPanel = (props) => {
     )
 }
 
-export default Content
+export default TopPanel

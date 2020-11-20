@@ -1,5 +1,7 @@
 import React from 'react'
-import content from './../../../public/css/sb-admin-2.css'
+import content from '../../../../css/sb-admin-2.css'
+import TopPanel from "./TopPanel";
+import Container from "./Container";
 
 const Content = (props) => {
     return (

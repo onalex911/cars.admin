@@ -1,5 +1,7 @@
 let store = {
-    _state : {},
+    _state : {
+        greeting: 'It works!'
+    },
     getState(){
         return this._state
     },
@@ -16,7 +18,7 @@ let store = {
 
     //переопределение "наблюдателем"
     subscribe(observer){
-        this._callSubscriber() = observer
+        this._callSubscriber = observer
     }
 
 

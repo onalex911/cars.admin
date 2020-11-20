@@ -5,8 +5,10 @@ import App from './App';
 import store from './redux/state'
 //import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css'
-import './../public/css/sb-admin-2.min.css'
-import Router from "react-router-dom";
+//import './css/sb-admin-2.css'
+import {
+    BrowserRouter as Router
+} from "react-router-dom";
 
 let rerenderEntireTree = (state) => {
     ReactDOM.render(

@@ -1,8 +1,10 @@
 import React from 'react'
-import content_wrapper from './../../../public/css/sb-admin-2.css'
-import d_flex from './../../../public/css/sb-admin-2.css'
-import flex_column from './../../../public/css/sb-admin-2.css'
-//import content from './../../../public/css/sb-admin-2.css'
+import content_wrapper from '../../../css/sb-admin-2.css'
+import d_flex from '../../../css/sb-admin-2.css'
+import flex_column from '../../../css/sb-admin-2.css'
+import Content from "./Content/Content";
+import Footer from "./Footer/Footer";
+//import content from './../../../css/sb-admin-2.css'
 
 const ContentWrapper = (props) => {
     return (

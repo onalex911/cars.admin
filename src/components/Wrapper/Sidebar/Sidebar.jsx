@@ -1,11 +1,11 @@
 import React from 'react'
-import navbar_nav from './../../../public/css/sb-admin-2.css'
-import nav_item from './../../../public/css/sb-admin-2.css'
-import sidebar from './../../../public/css/sb-admin-2.css'
-import sidebar_dark from './../../../public/css/sb-admin-2.css'
-import accordion from './../../../public/css/sb-admin-2.css'
-import accordionSidebar from './../../../public/css/sb-admin-2.css'
-import bg_gradient_primary from './../../../public/css/sb-admin-2.css'
+import navbar_nav from '../../../css/sb-admin-2.css'
+import nav_item from '../../../css/sb-admin-2.css'
+import sidebar from '../../../css/sb-admin-2.css'
+import sidebar_dark from '../../../css/sb-admin-2.css'
+import accordion from '../../../css/sb-admin-2.css'
+import accordionSidebar from '../../../css/sb-admin-2.css'
+import bg_gradient_primary from '../../../css/sb-admin-2.css'
 
 const Sidebar = (props) => {
     return (
