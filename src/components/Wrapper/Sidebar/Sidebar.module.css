@@ -1,0 +1,17 @@
+.nav_item{
+    text_align: center;
+    padding: 0.1rem 1rem;
+    width: 11rem;
+}
+.nav_item a {
+    color: #e2f5ff;
+    text-decoration: none;
+
+}
+.nav_item a:hover {
+    color: white;
+}
+
+.active a {
+    color: gold;
+}

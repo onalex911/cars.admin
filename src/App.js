@@ -9,9 +9,9 @@ import LogoutModal from "./components/LogoutModal";
 
 function App(props) {
   return (
-    <div>
+    <div id='page_top'>
       <Wrapper state={props.state}/>
-      <ArrowUp/>
+        {/*<ArrowUp/>*/}
       <LogoutModal/>
     </div>
   );

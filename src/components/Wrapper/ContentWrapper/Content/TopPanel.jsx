@@ -1,9 +1,9 @@
 import React from 'react'
-import navbar from '../../../../css/sb-admin-2.css'
+import '../../../../css/sb-admin-2.css'
 
 const TopPanel = (props) => {
     return (
-        <nav className={navbar}>
+        <nav className='navbar'>
 
             I'm TopPanel
 
