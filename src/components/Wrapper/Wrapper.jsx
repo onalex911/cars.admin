@@ -8,8 +8,8 @@ const Wrapper = (props) => {
     return (
         <div id='wrapper'>
             <Router>
-                <Sidebar state={props.state}/>
-                <ContentWrapper state={props.state}/>
+                <Sidebar state={props.state.adminPages}/>
+                <ContentWrapper state={props.state.adminPages}/>
             </Router>
         </div>
     )
