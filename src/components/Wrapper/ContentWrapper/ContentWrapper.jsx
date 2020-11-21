@@ -10,7 +10,10 @@ const ContentWrapper = (props) => {
     return (
         <div id='content_wrapper' className={`d_flex flex_column`}>
 
-            <Content state={props.state}/>
+            <Content
+                state={props.state}
+                dispatch={props.dispatch}
+            />
             <Footer/>
 
         </div>

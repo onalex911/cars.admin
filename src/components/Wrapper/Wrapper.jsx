@@ -9,7 +9,10 @@ const Wrapper = (props) => {
         <div id='wrapper'>
             <Router>
                 <Sidebar state={props.state.adminPages}/>
-                <ContentWrapper state={props.state.adminPages}/>
+                <ContentWrapper
+                    state={props.state}
+                    dispatch={props.dispatch}
+                />
             </Router>
         </div>
     )

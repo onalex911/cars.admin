@@ -5,7 +5,7 @@ const EditGroups= (props) => {
     return (
         <div className='row'>
 
-            <h3>Главная</h3>
+            <h6>Главная</h6>
 
         </div>
     )

@@ -11,22 +11,24 @@ const Container = (props) => {
 
     return (
         <div className='container_fluid'>
-            <h1 className={`h3 mb_0`}>{props.state.activePage.pageHead}</h1>
+            <h1 className={`h3 mb_0`}>{props.state.adminPages.activePage.pageHead}</h1>
             <Switch>
                 <Route
-                    path={props.state.pagesInfo.pages[0].pagePath} exact
+                    path={props.state.adminPages.pagesInfo.pages[0].pagePath} exact
                     render={() => <MainPage/>}
                 />
                 <Route
-                    path={props.state.pagesInfo.pages[1].pagePath}
-                    render={() => <UploadImages/>}
+                    path={props.state.adminPages.pagesInfo.pages[1].pagePath}
+                    render={() => <UploadImages
+                        state={props.state}
+                        dispatch={props.dispatch}/>}
                 />
                 <Route
-                    path={props.state.pagesInfo.pages[2].pagePath}
+                    path={props.state.adminPages.pagesInfo.pages[2].pagePath}
                     render={() => <EditGroups/>}
                 />
                 <Route
-                    path={props.state.pagesInfo.pages[3].pagePath}
+                    path={props.state.adminPages.pagesInfo.pages[3].pagePath}
                     render={() => <EditIndividual/>}
                 />
             </Switch>

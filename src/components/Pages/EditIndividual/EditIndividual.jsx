@@ -5,7 +5,7 @@ const EditIndividual= (props) => {
     return (
         <div className='row'>
 
-            <h3>Editing of individual images for the VIN</h3>
+            <h6>Editing of individual images for the VIN</h6>
 
         </div>
     )

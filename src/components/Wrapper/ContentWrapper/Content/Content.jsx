@@ -8,7 +8,10 @@ const Content = (props) => {
         <div id='content'>
 
             <TopPanel/>
-            <Container state={props.state}/>
+            <Container
+                state={props.state}
+                dispatch={props.dispatch}
+            />
 
         </div>
     )

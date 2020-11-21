@@ -1,0 +1,11 @@
+.content {
+    margin:30px auto;
+    padding:15px 10px;
+    text-align:center;
+    border: dotted 1px #2d4373;
+    width:100%;
+}
+
+.margined {
+    margin:15px 15px;
+}
