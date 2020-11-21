@@ -12,6 +12,6 @@
     color: white;
 }
 
-.active a {
+a.active {
     color: gold;
 }

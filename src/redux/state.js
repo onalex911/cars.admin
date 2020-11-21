@@ -10,7 +10,7 @@ let store = {
             },
 
             uploading: {
-                pagePath: '/uplading',
+                pagePath: '/uplоading',
                 pageHead: 'Загрузка изображений',
                 externalAction: 'https://cars.arkont-portal.ru/legacy/upload_image.html'
             },
@@ -18,6 +18,12 @@ let store = {
             editGroups: {
                 pagePath: '/editgroups',
                 pageHead: 'Редактирование групп изображений',
+                externalAction: 'https://cars.arkont-portal.ru/legacy/show_photos.html'
+            },
+
+            editIndividual: {
+                pagePath: '/editind',
+                pageHead: 'Редактирование индивидуальных изображений',
                 externalAction: 'https://cars.arkont-portal.ru/legacy/show_photos.html'
             },
         }
