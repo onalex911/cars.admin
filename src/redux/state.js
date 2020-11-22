@@ -13,6 +13,8 @@ let store = {
                             id: 'main',
                             pagePath: '/',
                             pageHead: 'Главная страница',
+                            pageMenuTitle: 'Главная',
+                            setExact: true,
                             externalAction: ''
 
                         },
@@ -21,6 +23,8 @@ let store = {
                             id: 'uploading',
                             pagePath: '/uplоading',
                             pageHead: 'Загрузка изображений',
+                            pageMenuTitle: 'Загр. изобр.',
+                            setExact: false,
                             externalAction: 'https://cars.arkont-portal.ru/legacy/upload_image.html'
 
                         },
@@ -29,6 +33,8 @@ let store = {
                             id: 'editGroups',
                             pagePath: '/editgroups',
                             pageHead: 'Редактирование групп изображений',
+                            pageMenuTitle: 'Ред. групп изобр.',
+                            setExact: false,
                             externalAction: 'https://cars.arkont-portal.ru/legacy/show_photos.html'
 
                         },
@@ -37,6 +43,8 @@ let store = {
                             id: 'editIndividual',
                             pagePath: '/edit_ind',
                             pageHead: 'Редактирование индивидуальных изображений',
+                            pageMenuTitle: 'Ред. инд. изобр.',
+                            setExact: false,
                             externalAction: 'https://cars.arkont-portal.ru/legacy/show_photos.html'
 
                         }
