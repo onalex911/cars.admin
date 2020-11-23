@@ -1,6 +1,8 @@
 //задаем идентификатор действия, чтобы избежать опечаток (WebStorm будет выдавать правильную подсказку)
 const UPDATE_VIN = 'UPDATE-VIN';
-const CHECK_VIN = 'CHECK-VIN'
+const CHECK_VIN = 'CHECK-VIN';
+const FIND_PAGE_INFO = 'FIND-PAGE-INFO'
+const FIND_PAGE_HEADER = 'FIND-PAGE-HEADER'
 
 let store = {
     _state: {
@@ -12,7 +14,7 @@ let store = {
                         {
                             id: 'main',
                             pagePath: '/',
-                            pageHead: 'Главная страница',
+                            pageHeader: 'Главная страница',
                             pageMenuTitle: 'Главная',
                             setExact: true,
                             externalAction: ''
@@ -21,8 +23,8 @@ let store = {
 
                         {
                             id: 'uploading',
-                            pagePath: '/uplоading',
-                            pageHead: 'Загрузка изображений',
+                            pagePath: '/uploading',
+                            pageHeader: 'Загрузка изображений',
                             pageMenuTitle: 'Загр. изобр.',
                             setExact: false,
                             externalAction: 'https://cars.arkont-portal.ru/legacy/upload_image.html'
@@ -32,7 +34,7 @@ let store = {
                         {
                             id: 'editGroups',
                             pagePath: '/editgroups',
-                            pageHead: 'Редактирование групп изображений',
+                            pageHeader: 'Редактирование групп изображений',
                             pageMenuTitle: 'Ред. групп изобр.',
                             setExact: false,
                             externalAction: 'https://cars.arkont-portal.ru/legacy/show_photos.html'
@@ -42,7 +44,7 @@ let store = {
                         {
                             id: 'editIndividual',
                             pagePath: '/edit_ind',
-                            pageHead: 'Редактирование индивидуальных изображений',
+                            pageHeader: 'Редактирование индивидуальных изображений',
                             pageMenuTitle: 'Ред. инд. изобр.',
                             setExact: false,
                             externalAction: 'https://cars.arkont-portal.ru/legacy/show_photos.html'
@@ -53,30 +55,9 @@ let store = {
 
             activePage:
                 {
-                    pageHead: 'Главная (начальное значение)'
+                    pageHeader: 'Главная (начальное значение)'
                 },
 
-            setActive(match, location) {
-                //debugger
-                if (match) {
-                    console.log(`setActive got ${location.pathname}`)
-                    /*console.log(`Now pageHead is: ${store._state.adminPages.activePage.pageHead}`)
-                    let res = store.findPageByPath(location.pathname)
-                    //debugger
-                    if(res) {
-                        console.log(`YES! res is nor NULL! ${res}`)
-                        store._state.adminPages.activePage.pageHead = res
-                        //const eventID = parseInt(match.params.eventID);
-                        //return !isNaN(eventID) && eventID % 2 === 1;
-                        //
-                        store._callSubscriber(store._state)
-                    }
-                    else console.log(`res for ${location.pathname} is null`)
-
-                    */
-                }
-                return false
-            }
         },
 
         imageService: {
@@ -107,16 +88,7 @@ let store = {
     findPageByPath(path) {
         //alert(path)
         //let i = 0
-        this._state.adminPages.pagesInfo.pages.forEach((item, i, arr) => {
-                //debugger
-                //console.log(item.pagePath)
-                if (item.pagePath === path) {
-                    return item.pageHead
-                } else
-                    console.log(`${item.pagePath} !== ${path}`)
-                return false
-            }
-        )
+
         //console.log(`${i}`)
     },
 
@@ -138,6 +110,18 @@ let store = {
                 }
                 this._callSubscriber(this._state) //вызываем функцию перерисовки
                 break
+
+            case FIND_PAGE_HEADER:
+                //debugger
+                const curPage = this._state.adminPages.pagesInfo.pages.filter((item) =>
+                    {
+                        return item.pagePath === action.curPath
+                    }
+                );
+                this._state.adminPages.activePage.pageHeader = curPage[0].pageHeader
+                this._callSubscriber(this._state) //вызываем функцию перерисовки
+                break
+
             default:
                 console.log('No appropriate action for the dispatch')
         }
@@ -152,6 +136,10 @@ export const updateVinActionCreator = (text) => {
 
 export const checkVinActionCreator = () => {
     return {type: CHECK_VIN}
+}
+
+export const findPageHeaderActionCreator = (path) => {
+    return {type: FIND_PAGE_HEADER,curPath: path}
 }
 
 export default store
