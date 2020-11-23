@@ -119,7 +119,7 @@ let store = {
                     }
                 );
                 this._state.adminPages.activePage.pageHeader = curPage[0].pageHeader
-                this._callSubscriber(this._state) //вызываем функцию перерисовки
+                //this._callSubscriber(this._state) //вызываем функцию перерисовки
                 break
 
             default:
