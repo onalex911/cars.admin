@@ -1,7 +1,7 @@
 import React from 'react'
 import '../../../css/sb-admin-2.css'
-import {NavLink, Link} from "react-router-dom";
-import SidebarMenu from "./SidebarMenu";
+import {Link} from "react-router-dom";
+//import SidebarMenu from "./SidebarMenu";
 //import FontAwesome from 'react-fontawesome'
 //import faStyles from 'font-awesome/css/font-awesome.css'
 //import 'font-awesome/css/font-awesome.min.css';

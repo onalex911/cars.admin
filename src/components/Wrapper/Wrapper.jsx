@@ -1,6 +1,6 @@
 import React from 'react'
 import '../../css/sb-admin-2.css'
-import Sidebar from "./Sidebar/Sidebar";
+//import Sidebar from "./Sidebar/Sidebar";
 import ContentWrapper from "./ContentWrapper/ContentWrapper";
 import {BrowserRouter as Router} from "react-router-dom";
 import SidebarContainer from "./Sidebar/SidebarContainer";
