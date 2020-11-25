@@ -1,6 +1,6 @@
 import React from 'react'
 import '../../css/sb-admin-2.css'
-import Sidebar from "./Sidebar/Sidebar";
+//import Sidebar from "./Sidebar/Sidebar";
 import ContentWrapper from "./ContentWrapper/ContentWrapper";
 import SidebarContainer from "./Sidebar/SidebarContainer";
 import {findPageHeaderActionCreator} from "../../redux/state";

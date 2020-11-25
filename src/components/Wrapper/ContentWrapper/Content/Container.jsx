@@ -5,16 +5,18 @@ import UploadImages from "../../../Pages/UploadImages/UploadImages";
 import EditGroups from "../../../Pages/EditGroups/EditGroups";
 import {Switch, Route} from "react-router-dom";
 import EditIndividual from "../../../Pages/EditIndividual/EditIndividual";
-import PageHeader from "../../Sidebar/PageHeader";
-//import {findPageHeaderActionCreator} from "../../../../redux/state";
+
+//import PageHeader from "../../Sidebar/PageHeader";
+
+import {ShowTheLocationWithRouter} from "../../ShowHref";
+
 
 const Container = (props) => {
 //debugger
-
-
     return (
         <div className='container_fluid'>
-            <PageHeader/>
+            <h1 className={`h3 mb_0`}><ShowTheLocationWithRouter state={props.state} dispatch={props.dispatch}/></h1>
+
             <Switch>
                 <Route
                     path={props.state.adminPages.pagesInfo.pages[0].pagePath} exact
