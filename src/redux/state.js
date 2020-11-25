@@ -1,7 +1,7 @@
 //задаем идентификатор действия, чтобы избежать опечаток (WebStorm будет выдавать правильную подсказку)
 const UPDATE_VIN = 'UPDATE-VIN';
 const CHECK_VIN = 'CHECK-VIN';
-const FIND_PAGE_INFO = 'FIND-PAGE-INFO'
+//const FIND_PAGE_INFO = 'FIND-PAGE-INFO'
 const FIND_PAGE_HEADER = 'FIND-PAGE-HEADER'
 
 let store = {
@@ -85,12 +85,7 @@ let store = {
     },
 
 
-    findPageByPath(path) {
-        //alert(path)
-        //let i = 0
 
-        //console.log(`${i}`)
-    },
 
     dispatch(action) {
 
@@ -119,7 +114,7 @@ let store = {
                     }
                 );
                 this._state.adminPages.activePage.pageHeader = curPage[0].pageHeader
-                this._callSubscriber(this._state) //вызываем функцию перерисовки
+                //this._callSubscriber(this._state) //вызываем функцию перерисовки
                 break
 
             default:

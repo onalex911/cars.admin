@@ -6,15 +6,18 @@ import React from 'react'
 import Wrapper from "./components/Wrapper/Wrapper";
 //import ArrowUp from "./components/ArrowUp";
 import LogoutModal from "./components/LogoutModal";
+import {BrowserRouter} from "react-router-dom";
 
 function App(props) {
-  return (
-    <div id='page_top'>
-      <Wrapper state={props.state} dispatch={props.dispatch}/>
-        {/*<ArrowUp/>*/}
-      <LogoutModal/>
-    </div>
-  );
+    return (
+        <div id='page_top'>
+            <BrowserRouter>
+                <Wrapper state={props.state} dispatch={props.dispatch}/>
+                {/*<ArrowUp/>*/}
+                <LogoutModal/>
+            </BrowserRouter>
+        </div>
+    );
 }
 
 export default App;
