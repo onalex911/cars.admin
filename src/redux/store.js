@@ -2,7 +2,7 @@
 //const UPDATE_VIN = 'UPDATE-VIN';
 //const CHECK_VIN = 'CHECK-VIN';
 //const FIND_PAGE_INFO = 'FIND-PAGE-INFO'
-const FIND_PAGE_HEADER = 'FIND-PAGE-HEADER'
+//const FIND_PAGE_HEADER = 'FIND-PAGE-HEADER'
 
 let store = {
     _state: {
@@ -148,8 +148,6 @@ let store = {
 }
 
 
-export const findPageHeaderActionCreator = (path) => {
-    return {type: FIND_PAGE_HEADER, curPath: path}
-}
+
 
 export default store

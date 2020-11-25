@@ -4,24 +4,26 @@ const CHECK_VIN = 'CHECK-VIN';      //влидация VIN
 
 const inputVinReducer = (state, action) => {
 
+    let stateCopy = { ...state }
+
     switch (action.type) {
         case UPDATE_VIN:
-            state.imageService.currentVIN = action.newText
-            return state
+            stateCopy.imageService.currentVIN = action.newText
+            return stateCopy
 
         case CHECK_VIN:
-            if (state.imageService.currentVIN.length !== 17) {
-                state.imageService.rightVIN = ''
+            if (stateCopy.imageService.currentVIN.length !== 17) {
+                stateCopy.imageService.rightVIN = ''
                 alert("VIN должен состоятиь из 17-ти символов!")
 
             } else {
-                state.imageService.rightVIN = state.imageService.currentVIN
+                stateCopy.imageService.rightVIN = state.imageService.currentVIN
             }
 
-            return state
+            return stateCopy
 
         default:
-            return this.state
+            return stateCopy
 
     }
 
