@@ -2,7 +2,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { withRouter } from "react-router";
-import {findPageHeaderActionCreator} from "../../redux/state";
+import {findPageHeaderActionCreator} from "../../redux/store";
 
 // A simple component that shows the pathname of the current location
 class ShowTheLocation extends React.Component {

@@ -1,6 +1,6 @@
 //задаем идентификатор действия, чтобы избежать опечаток (WebStorm будет выдавать правильную подсказку)
-const UPDATE_VIN = 'UPDATE-VIN';
-const CHECK_VIN = 'CHECK-VIN';
+//const UPDATE_VIN = 'UPDATE-VIN';
+//const CHECK_VIN = 'CHECK-VIN';
 //const FIND_PAGE_INFO = 'FIND-PAGE-INFO'
 const FIND_PAGE_HEADER = 'FIND-PAGE-HEADER'
 
@@ -63,6 +63,32 @@ let store = {
         imageService: {
             currentVIN: '',
             rightVIN: ''
+        },
+
+        metriksInfo: {
+            brandInfo: [
+                {
+                    id: 1,
+                    name: 'Chevrolet',
+                    uloadedGroups: 7,
+                    uloadedImages: 80,
+                    lastUpload: '2020-11-21'
+                },
+                {
+                    id: 2,
+                    name: 'Hyundai',
+                    uloadedGroups: 21,
+                    uloadedImages: 213,
+                    lastUpload: '2020-11-20'
+                },
+                {
+                    id: 3,
+                    name: 'Nissan',
+                    uloadedGroups: 9,
+                    uloadedImages: 79,
+                    lastUpload: '2020-11-06'
+                }
+            ]
         }
     },
 
@@ -83,8 +109,6 @@ let store = {
         console.log('Textarea updated with:' + newText)
         this._callSubscriber(this._state) //вызываем функцию перерисовки
     },
-
-
 
 
     dispatch(action) {
@@ -108,8 +132,7 @@ let store = {
 
             case FIND_PAGE_HEADER:
                 //debugger
-                const curPage = this._state.adminPages.pagesInfo.pages.filter((item) =>
-                    {
+                const curPage = this._state.adminPages.pagesInfo.pages.filter((item) => {
                         return item.pagePath === action.curPath
                     }
                 );
@@ -124,17 +147,9 @@ let store = {
 
 }
 
-//создаем Action Creator для корректного создания объекта именно для данного действия dispatcher-а
-export const updateVinActionCreator = (text) => {
-    return {type: UPDATE_VIN, newText: text}
-}
-
-export const checkVinActionCreator = () => {
-    return {type: CHECK_VIN}
-}
 
 export const findPageHeaderActionCreator = (path) => {
-    return {type: FIND_PAGE_HEADER,curPath: path}
+    return {type: FIND_PAGE_HEADER, curPath: path}
 }
 
 export default store

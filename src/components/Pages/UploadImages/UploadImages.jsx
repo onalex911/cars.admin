@@ -1,7 +1,7 @@
 import React from 'react'
 import '../../../css/sb-admin-2.css'
 import s from './UploadImages.module.css'
-import {checkVinActionCreator, updateVinActionCreator} from "../../../redux/state";
+import {checkVinActionCreator, updateVinActionCreator} from "../../../redux/store";
 
 const UploadImages = (props) => {
 
